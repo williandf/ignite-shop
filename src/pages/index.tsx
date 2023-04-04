@@ -31,7 +31,7 @@ const [sliderRef] = useKeenSlider({
     <HomeContainer ref={sliderRef} className="keen-slider">
       {products.map(product => {
         return (
-          <Link href={`/product/${product.id}`} passHref legacyBehavior key={product.id}>     
+          <Link href={`/product/${product.id}`} passHref legacyBehavior key={product.id} prefetch={false} >     
             <Product key={product.id} className="keen-slider__slide">
                   
               <Image src={product.imageUrl} width={520} height={480} alt="" />
