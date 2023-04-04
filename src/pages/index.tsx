@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HomeContainer, Product } from "./styles/pages/home";
+import { HomeContainer, Product } from "../styles/pages/home";
 import { useKeenSlider } from 'keen-slider/react';
 import { stripe } from "../lib/stripe";
 import { GetStaticProps } from "next";
@@ -12,7 +12,7 @@ interface IProduct {
   id: string;
     name: string;
     imageUrl: string;
-    price: number;
+    price: string;
 }
 
 interface HomeProps {
