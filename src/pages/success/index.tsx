@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image"
 import { SuccessContainer, ImageContainer } from "@/styles/pages/success";
@@ -15,20 +16,27 @@ interface SuccessProps {
 
 export default function Success({ customerName, product }: SuccessProps) {
     return (
-        <SuccessContainer>
-            <h1>Compra efetuada!</h1>
+        <>
+            <Head>
+                <title>Compra efetuada | Ignite Shop</title>
 
-            <ImageContainer>
-                <Image src={product.imageUrl} width={120} height={110} alt="" />
-            </ImageContainer>
-            <p>
-                Uhull <strong>{customerName}</strong>, sua <strong>{product.name}</strong> já está a caminho da sua casa.
-            </p>
+                <meta name="robots" content="noindex" />
+            </Head>
+            <SuccessContainer>
+                <h1>Compra efetuada!</h1>
 
-            <Link href="/">
-                Voltar ao catálogo
-            </Link>
-        </SuccessContainer>
+                <ImageContainer>
+                    <Image src={product.imageUrl} width={120} height={110} alt="" />
+                </ImageContainer>
+                <p>
+                    Uhull <strong>{customerName}</strong>, sua <strong>{product.name}</strong> já está a caminho da sua casa.
+                </p>
+
+                <Link href="/">
+                    Voltar ao catálogo
+                </Link>
+            </SuccessContainer>
+        </>
     )
 }
 
