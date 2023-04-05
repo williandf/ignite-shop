@@ -1,5 +1,5 @@
 <div align="center">
-  <img src=".github/capa.png" />
+  <img src="./.github/capa.png" />
 </div>
 
 <h1 align="center" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">Ignite Shop - Ignite</h1>
